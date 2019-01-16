@@ -3,7 +3,7 @@ package Sah::Schema::filesize;
 # DATE
 # VERSION
 
-our $schema = ['float*' => {
+our $schema = ['float' => {
     summary => 'File size',
     description => <<'_',
 

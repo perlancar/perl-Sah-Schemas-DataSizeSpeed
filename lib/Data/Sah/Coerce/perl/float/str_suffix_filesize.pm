@@ -32,7 +32,7 @@ sub coerce {
     $res->{modules}{"Data::Size::Suffix::Filesize"} = 0;
     $res->{expr_coerce} = join(
         "",
-        "[undef, \$1 * \$Data::Size::Suffix::Filesize::suffixes{(lc \$2)}]",
+        "\$1 * \$Data::Size::Suffix::Filesize::suffixes{(lc \$2)}",
     );
 
     $res;
