@@ -12,8 +12,7 @@ use Data::Dmp;
 
 sub meta {
     +{
-        v => 3,
-        enable_by_default => 0,
+        v => 4,
         prio => 50,
         precludes => [qr/\Astr_suffix_(\w+)\z/],
     };
