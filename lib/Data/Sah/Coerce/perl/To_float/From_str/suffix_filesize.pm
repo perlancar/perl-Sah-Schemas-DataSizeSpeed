@@ -1,6 +1,8 @@
-package Data::Sah::Coerce::perl::float::str_suffix_filesize;
+package Data::Sah::Coerce::perl::To_float::From_str::suffix_filesize;
 
+# AUTHOR
 # DATE
+# DIST
 # VERSION
 
 use 5.010001;
@@ -13,8 +15,9 @@ use Data::Dmp;
 sub meta {
     +{
         v => 4,
+        summary => 'Parse number from string containing size suffixes',
         prio => 50,
-        precludes => [qr/\Astr_suffix_(\w+)\z/],
+        precludes => [qr/\AFrom_str::suffix_(\w+)\z/],
     };
 }
 
@@ -38,7 +41,7 @@ sub coerce {
 }
 
 1;
-# ABSTRACT: Parse number from string containing size suffixes
+# ABSTRACT:
 
 =for Pod::Coverage ^(meta|coerce)$
 
@@ -50,9 +53,5 @@ number with the number multiplied by the suffix multiplier, e.g.:
  2KB    -> 20248
  3.5mb  -> 3670016
  3.5Mib -> 3500000
-
-The rule is not enabled by default. You can enable it in a schema using e.g.:
-
- ["float", "x.perl.coerce_rules"=>["str_suffix_filesize"]]
 
 =cut

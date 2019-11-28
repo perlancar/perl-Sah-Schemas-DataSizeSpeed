@@ -18,7 +18,7 @@ Can be coerced from string that contains units, e.g.:
 
 _
     min => 0,
-    'x.perl.coerce_rules' => ['str_suffix_filesize'],
+    'x.perl.coerce_rules' => ['From_str::suffix_filesize'],
 }, {}];
 
 1;
